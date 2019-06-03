@@ -24,3 +24,11 @@ So that I know what I have been using my money for,
 I would like to be able to print a ``bank statement``.
 ```
 
+<h4 align='center'>
+  How To Run This Test
+</h4>
+
+- ``Fork`` and ``clone`` Repo.
+- cd into ``BankTechTest``.
+- Run ``bundle install``.
+- To run ``test``  type ``rspec``.

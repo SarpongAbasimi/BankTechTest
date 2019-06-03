@@ -34,5 +34,11 @@ RSpec.describe Account do
       account.deposit(50)
       expect { account.withdraw(20) }.to change{ account.balance }.by(-20)
     end
+
+    it 'raises an error if a user tries to withdraw money from an empty account' do
+      expect { account.withdraw(10) }.to raise_error('You have 0 balance')
+    end
   end
+
+
 end
