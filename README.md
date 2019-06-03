@@ -15,7 +15,7 @@ I would like to be able to deposit money at a Bank.
 ```
 As a User,
 So that I can get money from my account,
-I would like to be able to withdrawal money from a bank.
+I would like to be able to withdraw money from a bank.
 ```
 
 ```
