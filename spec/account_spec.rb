@@ -41,4 +41,13 @@ RSpec.describe Account do
       expect { account.withdraw(10) }.to raise_error('You have 0 balance')
     end
   end
+
+  describe "#account_statement" do
+    it 'prints the account statement' do
+      account.deposit(1000)
+      account.deposit(2000)
+      result = [["2019/6/4", 1000, "", 1000], ["2019/6/4", 2000, "", 3000]]
+      expect(account.account_statement).to eq(result);
+    end
+  end
 end
