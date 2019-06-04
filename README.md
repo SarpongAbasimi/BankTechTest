@@ -7,9 +7,8 @@
 
 
 <h4 align='center'>
-  How To Run This Test
+  How To Run This Test.
 </h4>
-
 
 - ``Fork`` and ``clone`` Repo.
 - cd into ``BankTechTest``.
@@ -18,7 +17,7 @@
 
 
 <h4 align='center'>
-  Simple User Stroy
+  Simple User Stroy.
 </h4>
 
 ```
@@ -51,8 +50,6 @@ The sole responsibility of the ``Account`` class is to allow users to ``deposit`
 
 > A more detailed steps of how the ``classess`` interact ``together``.
 
-==================
-
 #### Note it raises an error if a user tries to withdraw money from an account without enough funds.
 
 ```ruby
@@ -64,6 +61,7 @@ The sole responsibility of the ``Account`` class is to allow users to ``deposit`
   end
 ```
 
+> Lastly, although the application works perfectly, users are still able to deposit money into an account without any ``verification control system``. In future, maybe I would create a registration system to allow users to register in order to have an account. Also to protect these accounts and ensure that the right user was having access to an account, I would have created a ``pin`` verification system.
 
 <h4 align='center'>
 Challenges.
@@ -76,6 +74,9 @@ The main challenges I faced with tech test were
 
 - Dependency Injection.
   - I thought I understood the concept of dependency injection till I started working on this test, I do now though thanks to ``Marcus`` and ``Chembo``. I found myself hard coding classes into other classes, which led to me having difficulties in testing my classes. But after learning about dependency injection and revising Makers week 2 ``pills`` on ``OOP``, I was able to get going with the tech test.
+
+- Getting the output of the ``print_Statement`` right.
+ - ![Screen Shot 2019-06-04 at 19 01 53](https://user-images.githubusercontent.com/37377831/58914212-d8085b00-8715-11e9-9283-42e58abdee35.png)
 
 
 <h4 align='center'>
