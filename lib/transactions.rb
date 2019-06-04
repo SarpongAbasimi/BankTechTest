@@ -16,11 +16,17 @@ class Transactions
   def transaction_statement
     print TRANSACTIONS_HEADERS
     @statement.history.each do |each_amount|
-      if each_amount[2] == ""
-        print("#{each_amount[0]}|| #{each_amount[1]} #{'   '} ||       || #{each_amount[3]}\n")
-      else   
-        print("#{each_amount[0]}||        || #{each_amount[2]}    || #{each_amount[3]}\n")
-      end
+      credit_or_debit(each_amount)
     end
   end
+
+  private
+  def credit_or_debit(each_amount)
+    if each_amount[2] == ""
+      print("#{each_amount[0]}|| #{each_amount[1]} #{'   '} ||       || #{each_amount[3]}\n")
+    else   
+      print("#{each_amount[0]}||        || #{each_amount[2]}    || #{each_amount[3]}\n")
+    end
+  end
+
 end
