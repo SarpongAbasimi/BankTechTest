@@ -24,7 +24,7 @@ So that I know what I have been using my money for,
 I would like to be able to print a ``bank statement``.
 ```
 <h1 align='center'>
-Initial Domain Model
+Initial Domain Model.
 </h1>
 
 ![bank](https://user-images.githubusercontent.com/37377831/58862124-def88480-86a7-11e9-952f-4efcf856000f.jpg)

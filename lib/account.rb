@@ -1,14 +1,17 @@
 # frozen_string_literal: true
+require_relative 'transactions'
 
 class Account
   attr_accessor :balance
 
-  def initialize
+  def initialize(transaction = Transactions.new)
     @balance = 0
+    @transaction = transaction
   end
 
   def deposit(amount)
     @balance += amount
+    @transaction.make(amount,'', @balance)
   end
 
   def withdraw(amount)
