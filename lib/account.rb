@@ -18,6 +18,11 @@ class Account
     raise 'You have 0 balance' unless money?
 
     @balance -= amount
+    @transaction.make('', amount, @balance)
+  end
+
+  def account_statement
+    @transaction.transaction_statement
   end
 
   private
@@ -29,6 +34,6 @@ end
 
 # date       || credit  || debit  || balance
 # 14/01/2012 ||         || 500.00 || 2500.00
-# 13/01/2012 || 2000.00 ||        || 3000.00
+# 13/01/2012 || 2000.00 ||        || 3000.00a
 # 10/01/2012 || 1000.00 ||        || 1000.00
 
