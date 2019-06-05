@@ -22,6 +22,7 @@ class Transactions
   private
   def credit_or_debit(each_amount)
     if each_amount[2] == ""
+
       print("#{each_amount[0]}|| #{each_amount[1]} #{'   '} ||       || #{each_amount[3]}\n")
     else   
       print("#{each_amount[0]}||        || #{each_amount[2]}    || #{each_amount[3]}\n")
@@ -29,3 +30,4 @@ class Transactions
   end
 
 end
+

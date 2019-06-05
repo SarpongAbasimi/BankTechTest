@@ -19,7 +19,20 @@ RSpec.describe Account do
     it 'allows users to take funds from account' do
       account = Account.new
       account.deposit(40)
-      expect(account.balance).to eq(40)
+      account.withdraw(20) 
+      expect(account.balance).to eq(20)
     end
+
+    xit 'prints statement to users' do
+      account = Account.new
+      account.deposit(40)
+      account.withdraw(20) 
+      expect { account.account_statement }.to output('
+        date    || credit || debit || balance
+        05/06/2019|| 40     ||       || 40
+        05/06/2019||        || 20    || 20
+      ').to_stdout
+    end
+
   end
 end
