@@ -35,7 +35,7 @@ I would like to be able to withdraw money from a bank.
 ```
 As a User,
 So that I know what I have been using my money for,
-I would like to be able to print a ``bank statement``.
+I would like to be able to print a bank statement.
 ```
 <h1 align='center'>
 Initial Domain Model.
@@ -60,6 +60,14 @@ The sole responsibility of the ``Account`` class is to allow users to ``deposit`
     @transaction.make('', amount, @balance)
   end
 ```
+
+<h4 align='center'>
+Current Output.
+</h4>
+
+<img width="1278" alt="Screen Shot 2019-06-05 at 17 51 06" src="https://user-images.githubusercontent.com/37377831/58974899-84504d00-87bb-11e9-978a-533d5da596c6.png">
+
+> Note, I need to format currency to end with two zeros.
 
 > Lastly, although the application works perfectly, users are still able to deposit money into an account without any ``verification control system``. In future, maybe I would create a registration system to allow users to register in order to have an account. Also to protect these accounts and ensure that the right user was having access to an account, I would have created a ``pin`` verification system.
 
