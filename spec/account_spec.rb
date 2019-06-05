@@ -46,7 +46,8 @@ RSpec.describe Account do
     it 'prints the account statement' do
       account.deposit(1000)
       account.deposit(2000)
-      result = [["2019/6/4", 1000, "", 1000], ["2019/6/4", 2000, "", 3000]]
+      time = Time.now.strftime("%d/%m/%Y")
+      result = [[ time , 1000, "", 1000], [ time , 2000, "", 3000]]
       expect(account.account_statement).to eq(result);
     end
   end

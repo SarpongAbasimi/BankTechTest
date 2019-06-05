@@ -12,15 +12,12 @@ RSpec.describe Transactions do
       balance = account.balance
       transaction.make(credit, debit, balance)
 
-      time = Time.new
-      allow(time).to receive(:year).and_return(2019)
-      allow(time).to receive(:month).and_return(06)
-      allow(time).to receive(:day).and_return(04)
-
-      transaction_date = "#{time.year}/#{time.month}/#{time.day}"
-
-      expect(statement.history).to include([transaction_date, credit, debit, balance])
+      time = Time.now.strftime("%d/%m/%Y")
+      
+      expect(statement.history).to include([time, credit, debit, balance])
     end
   end
   
 end
+
+print(Time.now.strftime("%d/%m/%Y"))

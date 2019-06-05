@@ -8,5 +8,3 @@
 
 gem 'simplecov', '~> 0.16.1'
 
-gem 'rubocop', require: false
-

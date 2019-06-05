@@ -8,9 +8,8 @@ class Transactions
   end
   
   def make(credit, debit, balance)
-    date = Time.new 
-    transaction_date = "#{date.year}/#{date.month}/#{date.day}"
-    @statement.history.push([transaction_date, credit, debit, balance])
+    time = Time.now.strftime("%d/%m/%Y")
+    @statement.history.push([time, credit, debit, balance])
   end
 
   def transaction_statement

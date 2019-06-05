@@ -2,6 +2,7 @@
 
 require 'account'
 
+
 RSpec.describe Account do
   describe 'Account' do
     it 'allow users to should to create and deposit an account' do
