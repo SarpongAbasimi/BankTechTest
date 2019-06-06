@@ -1,7 +1,7 @@
 require_relative 'statement'
 
 class Transactions
-  TRANSACTIONS_HEADERS = "date #{'   '}|| credit || debit || balance\r\n"
+  TRANSACTIONS_HEADERS = "date || credit || debit || balance\n"
 
   def initialize(statement = Statement.new)
     @statement = statement
@@ -22,8 +22,7 @@ class Transactions
   private
   def credit_or_debit(each_amount)
     if each_amount[2] == ""
-
-      print("#{each_amount[0]}|| #{each_amount[1]} #{'   '} ||       || #{each_amount[3]}\n")
+      print("#{each_amount[0]}|| #{each_amount[1]}||       || #{each_amount[3]}\n")
     else   
       print("#{each_amount[0]}||        || #{each_amount[2]}    || #{each_amount[3]}\n")
     end
